@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Ocu Font Resizer</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="application-name" content="Ocu Font Resizer">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <main class="main-wrapper">
+            <h1>Ocu Font Resizer</h1>
+
+            <article class="main-wrapper-inner">
+                <h2>Main example</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <button class="change-body">
+                    <div class="change-body-prompt">Change font size for body</div>
+                    <div class="change-body-selects">
+                        <span>ABC</span>
+                        <span>ABC</span>
+                        <span>ABC</span>
+                    </div>
+                </button>
+
+                <section id="specific-block">
+                    <h3>Example of select type button and specific block</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <label>
+                        <span>Change font size for the block:</span>
+
+                        <select class="change-block">
+                            <option value="default" selected>default</option>
+                            <option value="18px">18px</option>
+                            <option value="20px">20px</option>
+                            <option value="24px">24px</option>
+                        </select>
+                    </label>
+                </section>
+            </article>
+        </main>
+
+        <script src="../src/ocuFontResizer.js"></script>
+
+        <script>
+            var changeBody = new ocuFontResizer();
+
+            changeBody.init({button: '.change-body', sizes: ['default', '18px', '20px']});
+
+            var changeBlock = new ocuFontResizer();
+
+            changeBlock.init({button: '.change-block', block: '#specific-block', sizes: ['default', '18px', '20px', '24px']});
+        </script>
+    </body>
+</html>
